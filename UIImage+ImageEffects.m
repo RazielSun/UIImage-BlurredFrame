@@ -103,27 +103,27 @@
 
 - (UIImage *)applyLightEffect
 {
-    UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.3];
-    return [self applyBlurWithRadius:30 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
+    UIColor *tintColor = [UIColor colorWithWhite:1.0f alpha:0.3f];
+    return [self applyBlurWithRadius:30 tintColor:tintColor saturationDeltaFactor:1.8f maskImage:nil];
 }
 
 - (UIImage *)applyExtraLightEffect
 {
-    UIColor *tintColor = [UIColor colorWithWhite:0.97 alpha:0.82];
-    return [self applyBlurWithRadius:20 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
+    UIColor *tintColor = [UIColor colorWithWhite:0.97f alpha:0.82f];
+    return [self applyBlurWithRadius:20 tintColor:tintColor saturationDeltaFactor:1.8f maskImage:nil];
 }
 
 - (UIImage *)applyDarkEffect
 {
-    UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.73];
-    return [self applyBlurWithRadius:20 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
+    UIColor *tintColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
+    return [self applyBlurWithRadius:6 tintColor:tintColor saturationDeltaFactor:1.8f maskImage:nil];
 }
 
 - (UIImage *)applyTintEffectWithColor:(UIColor *)tintColor
 {
-    const CGFloat EffectColorAlpha = 0.6;
+    const CGFloat EffectColorAlpha = 0.6f;
     UIColor *effectColor = tintColor;
-    int componentCount = (int)CGColorGetNumberOfComponents(tintColor.CGColor);
+    int componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
     if (componentCount == 2) {
         CGFloat b;
         if ([tintColor getWhite:&b alpha:NULL]) {
@@ -199,9 +199,9 @@
             if (radius % 2 != 1) {
                 radius += 1; // force radius to be odd so that the three box-blur methodology works.
             }
-            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
-            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
-            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
+            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
         }
         BOOL effectImageBuffersAreSwapped = NO;
         if (hasSaturationChange) {
