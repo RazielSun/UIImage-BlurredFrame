@@ -21,9 +21,9 @@
 		3A8DDDBF183E75BB00DC7AF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8DDDA1183E75BA00DC7AF0 /* UIKit.framework */; };
 		3A8DDDC7183E75BB00DC7AF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8DDDC5183E75BB00DC7AF0 /* InfoPlist.strings */; };
 		3A8DDDC9183E75BB00DC7AF0 /* UIImageBlurredFrameExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DDDC8183E75BB00DC7AF0 /* UIImageBlurredFrameExampleTests.m */; };
-		3A8DDDD7183E761B00DC7AF0 /* UIImage+BlurredFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DDDD4183E761B00DC7AF0 /* UIImage+BlurredFrame.m */; };
 		3A8DDDD8183E761B00DC7AF0 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DDDD6183E761B00DC7AF0 /* UIImage+ImageEffects.m */; };
 		3A8DDDDA183E76A400DC7AF0 /* normal_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A8DDDD9183E76A400DC7AF0 /* normal_image.jpg */; };
+		85CCAE001872C2B200411CE2 /* UIImage+BluredFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CCADFF1872C2B200411CE2 /* UIImage+BluredFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,11 @@
 		3A8DDDC4183E75BB00DC7AF0 /* UIImageBlurredFrameExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIImageBlurredFrameExampleTests-Info.plist"; sourceTree = "<group>"; };
 		3A8DDDC6183E75BB00DC7AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A8DDDC8183E75BB00DC7AF0 /* UIImageBlurredFrameExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageBlurredFrameExampleTests.m; sourceTree = "<group>"; };
-		3A8DDDD3183E761B00DC7AF0 /* UIImage+BlurredFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+BlurredFrame.h"; path = "../UIImage+BlurredFrame.h"; sourceTree = "<group>"; };
-		3A8DDDD4183E761B00DC7AF0 /* UIImage+BlurredFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BlurredFrame.m"; path = "../UIImage+BlurredFrame.m"; sourceTree = "<group>"; };
 		3A8DDDD5183E761B00DC7AF0 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "../UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		3A8DDDD6183E761B00DC7AF0 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "../UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		3A8DDDD9183E76A400DC7AF0 /* normal_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = normal_image.jpg; sourceTree = "<group>"; };
+		85CCADFE1872C2B200411CE2 /* UIImage+BluredFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+BluredFrame.h"; path = "../UIImage+BluredFrame.h"; sourceTree = "<group>"; };
+		85CCADFF1872C2B200411CE2 /* UIImage+BluredFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BluredFrame.m"; path = "../UIImage+BluredFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +165,8 @@
 		3A8DDDD2183E75F400DC7AF0 /* UIImage+BlurredFrame */ = {
 			isa = PBXGroup;
 			children = (
-				3A8DDDD3183E761B00DC7AF0 /* UIImage+BlurredFrame.h */,
-				3A8DDDD4183E761B00DC7AF0 /* UIImage+BlurredFrame.m */,
+				85CCADFE1872C2B200411CE2 /* UIImage+BluredFrame.h */,
+				85CCADFF1872C2B200411CE2 /* UIImage+BluredFrame.m */,
 				3A8DDDD5183E761B00DC7AF0 /* UIImage+ImageEffects.h */,
 				3A8DDDD6183E761B00DC7AF0 /* UIImage+ImageEffects.m */,
 			);
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8DDDD7183E761B00DC7AF0 /* UIImage+BlurredFrame.m in Sources */,
+				85CCAE001872C2B200411CE2 /* UIImage+BluredFrame.m in Sources */,
 				3A8DDDD8183E761B00DC7AF0 /* UIImage+ImageEffects.m in Sources */,
 				3A8DDDAA183E75BB00DC7AF0 /* main.m in Sources */,
 				3A8DDDAE183E75BB00DC7AF0 /* ILAppDelegate.m in Sources */,
@@ -485,6 +485,7 @@
 				3A8DDDCE183E75BB00DC7AF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A8DDDCF183E75BB00DC7AF0 /* Build configuration list for PBXNativeTarget "UIImageBlurredFrameExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				3A8DDDD1183E75BB00DC7AF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

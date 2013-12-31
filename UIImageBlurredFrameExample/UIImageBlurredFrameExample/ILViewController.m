@@ -7,7 +7,7 @@
 //
 
 #import "ILViewController.h"
-#import "UIImage+BlurredFrame.h"
+#import "UIImage+BluredFrame.h"
 
 @interface ILViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -23,7 +23,7 @@
     UIImage *img = [UIImage imageNamed:@"normal_image.jpg"];
     CGRect frame = CGRectMake(0, img.size.height - 200, img.size.width, img.size.height - 200);
     
-    img = [img applyLightEffectAtFrame:frame];
+    img = [img applyLightBluredAtFrame:frame];
     
     self.imageView.image = img;
 }
